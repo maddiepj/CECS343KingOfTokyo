@@ -12,6 +12,11 @@ public class DiceManager : MonoBehaviour
     ArrayList diceToRoll = new ArrayList();
     string[] faces = { "1", "2", "3", "claw", "lightning", "heart" };
 
+    int randomIndex;
+    int moneyCount;
+    int attackCount;
+    int healthCount;
+
     void Start()
     {
         for (int i = 0; i < 6; i++)
@@ -42,7 +47,8 @@ public class DiceManager : MonoBehaviour
     {
         foreach (Dice die in diceToRoll)
         {
-            int randomIndex = randomNumber(0, 6);
+            randomIndex = randomNumber(0,6);
+            Debug.Log("randomIndex: " + randomIndex);
             die.setValue(faces[randomIndex]);
         }
 
@@ -50,6 +56,31 @@ public class DiceManager : MonoBehaviour
         {
 
             Debug.Log("die " + i + " value: " + dice.value);
+
+        }
+
+    }
+
+    public void resolveDice()
+    {
+
+        foreach (Dice die in savedDice)
+        {
+
+            if (die.value == "lightning")
+            {
+                moneyCount++;
+            }
+            
+            else if (die.value == "claw")
+            {
+                attackCount++;
+            }
+
+            else if (die.value == "heart")
+            {
+                healthCount++;
+            }
 
         }
 
