@@ -11,6 +11,21 @@ public class MainMenuController : MonoBehaviour
     public Animator BlurFade;
     public Animator CircleFade;
     public GameObject optionsmenu;
+    public GameObject Gigasaur;
+    public GameObject SpacePenguin;
+    public GameObject Cthulu;
+    public GameObject MekaDragon;
+    public GameObject TheKing;
+    public GameObject CyberKitty;
+    public Button gb;
+    public Button spb;
+    public Button cb;
+    public Button mdb;
+    public Button tkb;
+    public Button ckb;
+
+    public List<GameObject> playerList = new List<GameObject>();
+    int playerNum = 0;
 
     void Start()
     {
@@ -201,5 +216,41 @@ public class MainMenuController : MonoBehaviour
         audioManager.PlaySound(pressButtonSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
+    }
+
+    public void GigasaurFunc()
+    {
+        playerList.Add(Gigasaur);
+        gb.interactable = false;
+    }
+
+    public void SpacePenguinFunc()
+    {
+        playerList.Add(SpacePenguin);
+        spb.interactable = false;
+    }
+
+    public void CthuluFunc()
+    {
+        playerList.Add(Cthulu);
+        cb.interactable = false;
+    }
+
+    public void MekaDragonFunc()
+    {
+        playerList.Add(MekaDragon);
+        mdb.interactable = false;
+    }
+
+    public void TheKingFunc()
+    {
+        playerList.Add(TheKing);
+        tkb.interactable = false;
+    }
+
+    public void CyberKittyFunc()
+    {
+        playerList.Add(CyberKitty);
+        ckb.interactable = false;
     }
 }
