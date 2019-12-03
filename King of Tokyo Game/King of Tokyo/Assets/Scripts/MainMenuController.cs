@@ -11,12 +11,19 @@ public class MainMenuController : MonoBehaviour
     public Animator BlurFade;
     public Animator CircleFade;
     public GameObject optionsmenu;
+    public GameObject SelScreen;
     public GameObject Gigasaur;
     public GameObject SpacePenguin;
     public GameObject Cthulu;
     public GameObject MekaDragon;
     public GameObject TheKing;
     public GameObject CyberKitty;
+    public GameObject GigasaurChar;
+    public GameObject SpacePenguinChar;
+    public GameObject CthuluChar;
+    public GameObject MekaDragonChar;
+    public GameObject TheKingChar;
+    public GameObject CyberKittyChar;
     public Button gb;
     public Button spb;
     public Button cb;
@@ -25,7 +32,7 @@ public class MainMenuController : MonoBehaviour
     public Button ckb;
 
     public List<GameObject> playerList = new List<GameObject>();
-    int playerNum = 0;
+
 
     void Start()
     {
@@ -208,7 +215,7 @@ public class MainMenuController : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void RestartLevel()
@@ -222,36 +229,47 @@ public class MainMenuController : MonoBehaviour
     {
         playerList.Add(Gigasaur);
         gb.interactable = false;
+        GigasaurChar.SetActive(true);
     }
 
     public void SpacePenguinFunc()
     {
         playerList.Add(SpacePenguin);
         spb.interactable = false;
+        SpacePenguinChar.SetActive(true);
     }
 
     public void CthuluFunc()
     {
         playerList.Add(Cthulu);
         cb.interactable = false;
+        CthuluChar.SetActive(true);
     }
 
     public void MekaDragonFunc()
     {
         playerList.Add(MekaDragon);
         mdb.interactable = false;
+        MekaDragonChar.SetActive(true);
     }
 
     public void TheKingFunc()
     {
         playerList.Add(TheKing);
         tkb.interactable = false;
+        TheKingChar.SetActive(true);
     }
 
     public void CyberKittyFunc()
     {
         playerList.Add(CyberKitty);
         ckb.interactable = false;
+        CyberKittyChar.SetActive(true);
+    }
+
+    public void finishCharacterSelect()
+    {
+        SelScreen.SetActive(false);
     }
 
     public List<GameObject> getPlayerList()
