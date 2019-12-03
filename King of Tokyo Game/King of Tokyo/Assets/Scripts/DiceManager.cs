@@ -7,9 +7,9 @@ public class DiceManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Dice dice;
     ArrayList savedDice = new ArrayList();
     ArrayList diceToRoll = new ArrayList();
+    public GameObject dice;
     string[] faces = { "1", "2", "3", "claw", "lightning", "heart" };
 
     int randomIndex;
@@ -19,15 +19,15 @@ public class DiceManager : MonoBehaviour
 
     void Start()
     {
+
         for (int i = 0; i < 6; i++)
         {
-            Instantiate(dice);
-            diceToRoll.Add(dice);
-            Debug.Log("die " + i + " value: " + dice.value);
+            GameObject die = Instantiate(dice);
+            Dice d = die.GetComponent<Dice>();
+            d.setValue(faces[randomNumber(0,6)]);
+            diceToRoll.Add(die);
+
         }
-
-        roll();
-
 
     }
 
@@ -45,17 +45,13 @@ public class DiceManager : MonoBehaviour
 
     public void roll()
     {
+
         foreach (Dice die in diceToRoll)
         {
+
             randomIndex = randomNumber(0,6);
-            Debug.Log("randomIndex: " + randomIndex);
+            Debug.Log("face rolled: " + faces[randomIndex]);
             die.setValue(faces[randomIndex]);
-        }
-
-        for (int i = 0; i < diceToRoll.Count; i++)
-        {
-
-            Debug.Log("die " + i + " value: " + dice.value);
 
         }
 

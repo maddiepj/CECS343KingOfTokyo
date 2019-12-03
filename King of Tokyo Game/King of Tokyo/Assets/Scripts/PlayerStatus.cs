@@ -19,6 +19,7 @@ public class PlayerStatus : MonoBehaviour
     {
         checkHealth();
         checkVP();
+        lastOneStanding();
     }
 
     public void checkHealth()
@@ -46,5 +47,12 @@ public class PlayerStatus : MonoBehaviour
         }
     }
 
+    public void lastOneStanding()
+    {
+        if (players.Count == 1)
+        {
+            // load Victory Screen?
+        }
+    }
 
 }
