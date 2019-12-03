@@ -451,6 +451,27 @@ MonoBehaviour:
   BlurFade: {fileID: 0}
   CircleFade: {fileID: 0}
   optionsmenu: {fileID: 1843337780}
+  SelScreen: {fileID: 0}
+  GameBoard: {fileID: 0}
+  Gigasaur: {fileID: 0}
+  SpacePenguin: {fileID: 0}
+  Cthulu: {fileID: 0}
+  MekaDragon: {fileID: 0}
+  TheKing: {fileID: 0}
+  CyberKitty: {fileID: 0}
+  GigasaurChar: {fileID: 0}
+  SpacePenguinChar: {fileID: 0}
+  CthuluChar: {fileID: 0}
+  MekaDragonChar: {fileID: 0}
+  TheKingChar: {fileID: 0}
+  CyberKittyChar: {fileID: 0}
+  gb: {fileID: 0}
+  spb: {fileID: 0}
+  cb: {fileID: 0}
+  mdb: {fileID: 0}
+  tkb: {fileID: 0}
+  ckb: {fileID: 0}
+  playerList: []
   hoverOverSound: ButtonHover
   pressButtonSound: ButtonPress
   music: Music
@@ -1195,8 +1216,8 @@ Canvas:
   m_GameObject: {fileID: 1129833966}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2041995678}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1944,8 +1965,8 @@ Canvas:
   m_GameObject: {fileID: 1843337780}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2041995678}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
