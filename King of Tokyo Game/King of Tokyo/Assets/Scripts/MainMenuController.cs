@@ -253,4 +253,10 @@ public class MainMenuController : MonoBehaviour
         playerList.Add(CyberKitty);
         ckb.interactable = false;
     }
+
+    public List<GameObject> getPlayerList()
+    {
+        return playerList;
+    }
+
 }
