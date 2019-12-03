@@ -15,6 +15,8 @@ public class DiceManager : MonoBehaviour
     public GameObject dicethree;
     public GameObject dicefour;
     public GameObject dicefive;
+    public GameObject rollButton;
+    public int rollNum = 0;
     GameObject[] diceToRoll = new GameObject[6];
     string[] faces = { "1", "2", "3", "claw", "lightning", "heart" };
 
@@ -67,6 +69,13 @@ public class DiceManager : MonoBehaviour
             }
         }
 
+        rollNum++;
+
+        if(rollNum == 3)
+        {
+            rollButton.SetActive(false);
+        }
+
     }
 
     public void resolveDice()
@@ -91,6 +100,9 @@ public class DiceManager : MonoBehaviour
             }
 
         }
+
+        rollNum = 0;
+        rollButton.SetActive(true);
 
     }
 
