@@ -17,7 +17,8 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        checkHealth();
+        checkVP();
     }
 
     public void checkHealth()
@@ -28,8 +29,22 @@ public class PlayerStatus : MonoBehaviour
             if (pHealth.getLifePoints() <= 0)
             {
                 players.Remove(player);
+                // load death screen??
             }
         }
     }
+
+    public void checkVP()
+    {
+        foreach (GameObject player in players)
+        {
+            VictoryPoints VP = player.GetComponent<VictoryPoints>();
+            if (VP.getVP() >= 20)
+            {
+                //load Victory Screen? 
+            }
+        }
+    }
+
 
 }
