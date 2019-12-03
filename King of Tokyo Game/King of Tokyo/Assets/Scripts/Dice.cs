@@ -12,12 +12,13 @@ public class Dice : MonoBehaviour
     public GameObject heart;
 
     public string value;
+    public bool saved;
     string[] faces = { "1", "2", "3", "claw", "lightning", "heart" };
 
     // Start is called before the first frame update
     void Start()
     {
-
+        saved = false;
         if (value.Equals("1"))
         {
             this.GetComponent<SpriteRenderer>().sprite = one.GetComponent<SpriteRenderer>().sprite;

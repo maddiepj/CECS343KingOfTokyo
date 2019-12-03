@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
     public Animator CircleFade;
     public GameObject optionsmenu;
     public GameObject SelScreen;
+    public GameObject GameBoard;
     public GameObject Gigasaur;
     public GameObject SpacePenguin;
     public GameObject Cthulu;
@@ -270,6 +271,7 @@ public class MainMenuController : MonoBehaviour
     public void finishCharacterSelect()
     {
         SelScreen.SetActive(false);
+        GameBoard.SetActive(true);
     }
 
     public List<GameObject> getPlayerList()
