@@ -474,7 +474,7 @@ MonoBehaviour:
   playerList: []
   hoverOverSound: ButtonHover
   pressButtonSound: ButtonPress
-  music: Music
+  music: MainMenu
   level1_bgm: Level1_BGM
   level2_bgm: Level2_BGM
   level3_bgm: Level3_BGM
@@ -1614,7 +1614,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7354be244576c4e85abd3a402f9852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: d15c9b0c8ba70e94fa399c39173fee68, type: 3}
+    volume: 0.171
+    tempo: 0
+    RandomVolume: 0
+    RandomTempo: 0
+    loop: 1
 --- !u!4 &1459055282
 Transform:
   m_ObjectHideFlags: 0

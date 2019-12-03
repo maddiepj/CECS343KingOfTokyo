@@ -80,7 +80,7 @@ public class AudioManager : MonoBehaviour
             _go.transform.SetParent(this.transform);                                    // as a child
             sounds[i].SetSource(_go.AddComponent<AudioSource>());                       // and of specific sound played
         }
-
+        Debug.Log("Running PLaySound");
         PlaySound("Music");
     }
 
