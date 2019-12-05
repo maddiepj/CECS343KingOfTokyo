@@ -6,12 +6,13 @@ public class Health : MonoBehaviour
 {
 
     TokyoCheck tokyoCheck;
+    int maxLife;
     int lifePoints;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        maxLife = 10;
         lifePoints = 10;
         tokyoCheck = this.GetComponent<TokyoCheck>();
 
@@ -43,7 +44,7 @@ public class Health : MonoBehaviour
 
         else {
 
-            if (lifePoints >= 10)
+            if (lifePoints >= maxLife)
             {
                 Debug.Log("Player is at max Life Points");
             }
@@ -57,6 +58,11 @@ public class Health : MonoBehaviour
                 lifePoints += points;
             }
         }
+    }
+
+    public void setMaxLife(int newMax)
+    {
+        maxLife = newMax;
     }
 
 }
