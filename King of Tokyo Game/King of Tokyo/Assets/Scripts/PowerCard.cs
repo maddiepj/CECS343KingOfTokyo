@@ -43,7 +43,7 @@ public class PowerCard : MonoBehaviour
 
     public virtual string description()
     {
-
+        return "";
     }
 
 

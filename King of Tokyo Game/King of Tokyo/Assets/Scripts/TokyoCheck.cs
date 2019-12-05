@@ -24,12 +24,12 @@ public class TokyoCheck : MonoBehaviour
         return insideTokyo;
     }
 
-    public bool enterTokyo()
+    public void enterTokyo()
     {
         insideTokyo = true;
     }
 
-    public bool leaveTokyo()
+    public void leaveTokyo()
     {
         insideTokyo = false;
     }
