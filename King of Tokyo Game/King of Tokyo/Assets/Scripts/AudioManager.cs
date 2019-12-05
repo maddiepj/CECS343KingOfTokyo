@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
             sounds[i].SetSource(_go.AddComponent<AudioSource>());                       // and of specific sound played
         }
         Debug.Log("Running PLaySound");
-        PlaySound("Music");
+        PlaySound("city");
     }
 
     public void PlaySound(string _name)

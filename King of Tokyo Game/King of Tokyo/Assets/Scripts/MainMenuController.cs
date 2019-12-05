@@ -38,6 +38,9 @@ public class MainMenuController : MonoBehaviour
         {
             Debug.LogError("No AudioManager Found");
         }
+
+        PlayMusic();
+        
     }
 
     // UI Sound Control ////////////////////////////////////////////////////////////////////////////////////
