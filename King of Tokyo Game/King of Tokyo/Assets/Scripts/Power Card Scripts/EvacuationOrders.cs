@@ -7,11 +7,15 @@ public class EvacuationOrders : PowerCard
 
     public MainMenuController menuControl;
     public List<GameObject> players;
+    public GameObject player;
+    public string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
         players = menuControl.playerList;
+        player = base.getOwnerObj();
+
     }
 
     // Update is called once per frame
@@ -37,10 +41,13 @@ public class EvacuationOrders : PowerCard
 
     public override void executeCard()
     {
-       foreach (GameObject player in players)
+       foreach (GameObject player2 in players)
         {
-            VictoryPoints vp = player.GetComponent<VictoryPoints>();
-            vp.removeVP(5);
+            VictoryPoints vp = player2.GetComponent<VictoryPoints>();
+            if (player2 != player)
+            {
+                vp.removeVP(5);
+            }
         }
     }
 

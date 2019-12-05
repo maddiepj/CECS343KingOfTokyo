@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PowerCard : MonoBehaviour
 {
-    public GameObject owner;
+    MainMenuController menuControl;
+    List<GameObject> players;
+    public string owner;
     public int cost;
     public string name;
     public string type;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        players = menuControl.playerList;
     }
 
     // Update is called once per frame
@@ -47,9 +50,29 @@ public class PowerCard : MonoBehaviour
     }
 
 
-    public void setOwner(GameObject player)
+    public void setOwner(string playerOwner)
     {
-        owner = player;
+        owner = playerOwner;
+
+        foreach (GameObject p in players)
+        {
+            if (p.GetComponent<PlayerDesc>().getName().Equals(owner))
+            {
+                player = p;
+            }
+        }
     }
+
+    public string getOwner()
+    {
+        return name;
+    }
+
+    public GameObject getOwnerObj()
+    {
+        return player;
+    }
+
+ 
 
 }

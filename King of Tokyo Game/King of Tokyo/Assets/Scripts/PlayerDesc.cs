@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDesc : MonoBehaviour
 {
     string name = "";
+
     // Start is called before the first frame update
     void Start()
     {

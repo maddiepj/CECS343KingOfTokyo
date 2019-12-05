@@ -5,12 +5,16 @@ using UnityEngine;
 public class EvenBigger : PowerCard
 {
 
+    MainMenuController menuControl;
+    List<GameObject> players;
     GameObject player;
+    string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        players = menuControl.getPlayerList();
+        player = base.getOwnerObj();
     }
 
     // Update is called once per frame

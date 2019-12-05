@@ -7,11 +7,14 @@ public class FlameThrower : PowerCard
 
     public MainMenuController menuControl;
     public List<GameObject> players;
+    public GameObject player;
+    public string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
         players = menuControl.getPlayerList();
+        player = base.getOwnerObj();
     }
 
     // Update is called once per frame
@@ -37,10 +40,13 @@ public class FlameThrower : PowerCard
 
     public override void executeCard()
     {
-        foreach (GameObject player in players)
+        foreach (GameObject player2 in players)
         {
-            Health pHealth = player.GetComponent<Health>();
-            pHealth.takeDamage(2);
+            if (player2 != player)
+            {
+                Health pHealth = player2.GetComponent<Health>();
+                pHealth.takeDamage(2);
+            }   
         }
     }
 

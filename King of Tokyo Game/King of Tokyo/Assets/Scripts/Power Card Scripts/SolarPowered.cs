@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class SolarPowered : PowerCard
 {
-
+    MainMenuController menuControl;
+    List<GameObject> players;
     GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        players = menuControl.getPlayerList();
+        player = base.getOwnerObj();
+
     }
 
     // Update is called once per frame
