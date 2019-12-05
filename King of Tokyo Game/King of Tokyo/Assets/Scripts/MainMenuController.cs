@@ -193,6 +193,10 @@ public class MainMenuController : MonoBehaviour
     }
 
     //Matt's added functions
+    public List<GameObject> getPlayerList()
+    {
+        return playerList;
+    }
 
     public void StartGame()
     {
@@ -272,11 +276,6 @@ public class MainMenuController : MonoBehaviour
     {
         SelScreen.SetActive(false);
         GameBoard.SetActive(true);
-    }
-
-    public List<GameObject> getPlayerList()
-    {
-        return playerList;
     }
 
 }
