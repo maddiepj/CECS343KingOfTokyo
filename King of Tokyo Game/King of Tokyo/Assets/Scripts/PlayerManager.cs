@@ -6,6 +6,9 @@ public class PlayerManager : MonoBehaviour
 {
     public MainMenuController menuInstance;
     public GameObject Playernamestring;
+    public GameObject PlayerHealthString;
+    public GameObject PlayerEnergyString;
+    public GameObject PlayerVictoryString;
     List<GameObject> playerList = new List<GameObject>();
     int i = 0;
     string pName;
@@ -24,7 +27,9 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerHealthString.GetComponent<UnityEngine.UI.Text>().text = this.getCurrentPlayer().GetComponent<Health>().getLifePoints().ToString();
+        PlayerEnergyString.GetComponent<UnityEngine.UI.Text>().text = this.getCurrentPlayer().GetComponent<Energy>().getEnergy().ToString();
+        PlayerVictoryString.GetComponent<UnityEngine.UI.Text>().text = this.getCurrentPlayer().GetComponent<VictoryPoints>().getVP().ToString();
     }
 
     public void playerTurn(GameObject player)

@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     TokyoCheck tokyoCheck;
     int maxLife;
     int lifePoints;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void takeDamage(int dmg)
