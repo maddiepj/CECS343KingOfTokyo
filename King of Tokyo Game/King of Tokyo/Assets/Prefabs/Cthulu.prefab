@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 9076267430038229590}
   - component: {fileID: 5397320674799283507}
   - component: {fileID: 7954200683323286040}
+  - component: {fileID: 5234351200481971633}
+  - component: {fileID: 5788634232909765524}
   m_Layer: 0
   m_Name: Cthulu
   m_TagString: Untagged
@@ -67,5 +69,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84691a269c698f54e8973fd72d17e069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5234351200481971633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758644327850225962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6c48dede6349943876502ee3566a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5788634232909765524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758644327850225962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db4bdb217b87b46b094bebf861b9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
