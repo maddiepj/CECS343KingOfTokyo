@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class SolarPowered : PowerCard
 {
-    MainMenuController menuControl;
-    List<GameObject> players;
-    GameObject player;
+    //protected MainMenuController menuControl;
+    //protected List<GameObject> players;
+    //protected GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        players = menuControl.getPlayerList();
-        player = base.getOwnerObj();
+        //players = menuControl.getPlayerList();
+        //player = base.getOwnerObj();
 
     }
 
@@ -39,7 +39,7 @@ public class SolarPowered : PowerCard
 
     public override void executeCard()
     {
-        Energy playerEnergy = player.GetComponent<Energy>();
+        Energy playerEnergy = base.player.GetComponent<Energy>();
         if (playerEnergy.getEnergy() == 0)
         {
             playerEnergy.addEnergy(1);

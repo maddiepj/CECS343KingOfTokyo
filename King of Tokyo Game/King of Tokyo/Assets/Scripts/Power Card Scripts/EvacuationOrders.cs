@@ -5,16 +5,16 @@ using UnityEngine;
 public class EvacuationOrders : PowerCard
 {
 
-    public MainMenuController menuControl;
-    public List<GameObject> players;
-    public GameObject player;
-    public string playerName;
+    //protected MainMenuController menuControl;
+    //protected List<GameObject> players;
+    //protected GameObject player;
+    //protected string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
-        players = menuControl.playerList;
-        player = base.getOwnerObj();
+        //players = menuControl.playerList;
+        //player = base.getOwnerObj();
 
     }
 
@@ -41,10 +41,10 @@ public class EvacuationOrders : PowerCard
 
     public override void executeCard()
     {
-       foreach (GameObject player2 in players)
+       foreach (GameObject player2 in base.players)
         {
             VictoryPoints vp = player2.GetComponent<VictoryPoints>();
-            if (player2 != player)
+            if (player2 != base.player)
             {
                 vp.removeVP(5);
             }

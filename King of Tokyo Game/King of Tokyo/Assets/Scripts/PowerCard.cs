@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PowerCard : MonoBehaviour
 {
-    MainMenuController menuControl;
-    List<GameObject> players;
+    public MainMenuController menuControl;
+    public List<GameObject> players;
     public string owner;
     public int cost;
     public string name;

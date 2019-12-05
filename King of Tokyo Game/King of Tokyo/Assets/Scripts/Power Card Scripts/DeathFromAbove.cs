@@ -5,16 +5,16 @@ using UnityEngine;
 public class DeathFromAbove : PowerCard
 {
 
-    MainMenuController menuControl;
-    List<GameObject> players;
-    GameObject player;
-    string playerName;
+    //protected MainMenuController menuControl;
+    //protected List<GameObject> players;
+    //protected GameObject player;
+    //protected string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
-        players = menuControl.getPlayerList();
-        player = base.getOwnerObj();
+        //players = menuControl.getPlayerList();
+        //player = base.getOwnerObj();
 
     }
 
@@ -41,17 +41,17 @@ public class DeathFromAbove : PowerCard
 
     public override void executeCard()
     {
-        VictoryPoints vp = player.GetComponent<VictoryPoints>();
-        TokyoCheck tokyoCheck = player.GetComponent<TokyoCheck>();
+        VictoryPoints vp = base.player.GetComponent<VictoryPoints>();
+        TokyoCheck tokyoCheck = base.player.GetComponent<TokyoCheck>();
         vp.addVP(2);
 
         if (!tokyoCheck.inTokyo())
         {
-            foreach (GameObject player2 in players)
+            foreach (GameObject player2 in base.players)
             {
          
                 TokyoCheck check = player2.GetComponent<TokyoCheck>();
-                if (check.inTokyo() && (player2 != player))
+                if (check.inTokyo() && (player2 != base.player))
                 {
                     check.leaveTokyo();
                 }

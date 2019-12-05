@@ -5,16 +5,16 @@ using UnityEngine;
 public class EvenBigger : PowerCard
 {
 
-    MainMenuController menuControl;
-    List<GameObject> players;
-    GameObject player;
-    string playerName;
+    //protected MainMenuController menuControl;
+    //protected List<GameObject> players;
+    //protected GameObject player;
+    //protected string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
-        players = menuControl.getPlayerList();
-        player = base.getOwnerObj();
+        //players = menuControl.getPlayerList();
+        //player = base.getOwnerObj();
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class EvenBigger : PowerCard
 
     public override void executeCard()
     {
-        Health playerHealth = player.GetComponent<Health>();
+        Health playerHealth = base.player.GetComponent<Health>();
         playerHealth.setMaxLife(12);
         playerHealth.increaseLifePoints(2);
     }

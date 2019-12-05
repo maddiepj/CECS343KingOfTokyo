@@ -5,16 +5,16 @@ using UnityEngine;
 public class FlameThrower : PowerCard
 {
 
-    public MainMenuController menuControl;
-    public List<GameObject> players;
-    public GameObject player;
-    public string playerName;
+    //protected MainMenuController menuControl;
+    //protected List<GameObject> players;
+    //protected GameObject player;
+    //protected string playerName;
 
     // Start is called before the first frame update
     void Start()
     {
-        players = menuControl.getPlayerList();
-        player = base.getOwnerObj();
+        //players = menuControl.getPlayerList();
+        //player = base.getOwnerObj();
     }
 
     // Update is called once per frame
