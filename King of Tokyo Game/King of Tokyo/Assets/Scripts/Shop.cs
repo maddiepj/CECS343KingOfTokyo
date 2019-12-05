@@ -10,9 +10,10 @@ public class Shop : MonoBehaviour
     List<PowerCard> stock;
     List<PowerCard> playerHand;
     PlayerManager playerMgr;
-    GameObject pmObj;
+    public GameObject pmObj;
     GameObject player;
     Energy playerPts;
+
 
     public GameObject DeathFromAboveCard;
     public GameObject EvacuationOrdersCard;
@@ -25,8 +26,8 @@ public class Shop : MonoBehaviour
     {
         playerMgr = pmObj.GetComponent<PlayerManager>();
         player = playerMgr.getCurrentPlayer();
-        playerHand = player.GetComponent<CardHand>().getHand();
-
+        //playerHand = player.GetComponent<CardHand>().getHand();
+        deck = new List<PowerCard>();
         createDeck();
 
     }
@@ -107,6 +108,7 @@ public class Shop : MonoBehaviour
 
     public void createDeck()
     {
+        Debug.Log("Here");
         GameObject card1 = Instantiate(DeathFromAboveCard);
         deck.Add(card1.GetComponent<PowerCard>());
 

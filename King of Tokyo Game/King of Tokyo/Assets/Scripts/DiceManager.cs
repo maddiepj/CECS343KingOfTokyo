@@ -16,6 +16,7 @@ public class DiceManager : MonoBehaviour
     public GameObject dicefour;
     public GameObject dicefive;
     public GameObject rollButton;
+    public PlayerManager PlayerManager;
     public int rollNum = 0;
     GameObject[] diceToRoll = new GameObject[6];
     string[] faces = { "1", "2", "3", "claw", "lightning", "heart" };
@@ -101,9 +102,20 @@ public class DiceManager : MonoBehaviour
 
         }
 
-        rollNum = 0;
-        rollButton.SetActive(true);
+        //PlayerManager.getCurrentPlayer().GetComponent<Health>().increaseLifePoints(healthCount);
+        //WHOOPS
+        //PlayerManager.getCurrentPlayer().GetComponent<VictoryPoints>().increaseLifePoints(healthCount);
+        //PlayerManager.getCurrentPlayer().GetComponent<Energy>().addEnergy(moneyCount);
+        //PlayerManager.getCurrentPlayer().GetComponent<Health>().increaseLifePoints(healthCount);
 
+        rollNum = 0;
+        
+
+    }
+
+    public void resetDice()
+    {
+        rollButton.SetActive(true);
     }
 
     public void dicezeroSelected(bool retVal)

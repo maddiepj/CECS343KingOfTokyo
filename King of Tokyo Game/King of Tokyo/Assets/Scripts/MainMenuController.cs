@@ -21,6 +21,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject MekaDragonChar;
     public GameObject TheKingChar;
     public GameObject CyberKittyChar;
+    public GameObject ShopManager;
     public Button gb;
     public Button spb;
     public Button cb;
@@ -289,6 +290,7 @@ public class MainMenuController : MonoBehaviour
         SelScreen.SetActive(false);
         GameBoard.SetActive(true);
         PlayerManager.SetActive(true);
+        //ShopManager.SetActive(true);
     }
 
 }
