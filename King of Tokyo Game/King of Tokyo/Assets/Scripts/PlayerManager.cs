@@ -8,12 +8,17 @@ public class PlayerManager : MonoBehaviour
     public GameObject Playernamestring;
     List<GameObject> playerList = new List<GameObject>();
     int i = 0;
-    // Start is called before the first frame update
+    string pName;
+
+   // Start is called before the first frame update
     void Start()
     {
         playerList = menuInstance.getPlayerList();
+        Debug.Log(playerList.Count);
         //player 1 starts
         playerTurn(playerList[i]);
+
+
     }
 
     // Update is called once per frame
@@ -24,25 +29,41 @@ public class PlayerManager : MonoBehaviour
 
     public void playerTurn(GameObject player)
     {
-        string Name = "test"; //player.getName();
-        Playernamestring.GetComponent<UnityEngine.UI.Text>().text = Name + "'s";
+        Debug.Log("Here's i: " + i);
+        pName = player.GetComponent<PlayerDesc>().getName();
+        Debug.Log(pName + "'s Turn");
+        Playernamestring.GetComponent<UnityEngine.UI.Text>().text = pName + "'s";
+
+        //foreach (GameObject p in playerList)
+        //{
+        //    Debug.Log(p.GetComponent<PlayerDesc>().getName());
+        //}
     }
 
     public void endTurn()
     {
-        playerTurn(playerList[this.nextPlayer()]);
+        int nextInt = this.nextPlayer();
+        Debug.Log("this is nextint" + nextInt);
+        playerTurn(playerList[nextInt]);
     }
 
     public int nextPlayer()
     {
-        if(i++ == playerList.Count)
+        Debug.Log("This is i when calling next player." + i);
+        if((i + 1) == playerList.Count)
         {
             i = 0;
             return i;
         }
         else
         {
-            return i++;
+            i++;
+            return i;
         }
+    }
+
+    public GameObject getCurrentPlayer()
+    {
+        return playerList[i];
     }
 }

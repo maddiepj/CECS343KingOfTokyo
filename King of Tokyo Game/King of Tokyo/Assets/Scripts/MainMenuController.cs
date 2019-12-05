@@ -13,12 +13,8 @@ public class MainMenuController : MonoBehaviour
     public GameObject optionsmenu;
     public GameObject SelScreen;
     public GameObject GameBoard;
-    public GameObject Gigasaur;
-    public GameObject SpacePenguin;
-    public GameObject Cthulu;
-    public GameObject MekaDragon;
-    public GameObject TheKing;
-    public GameObject CyberKitty;
+    public GameObject PlayerManager;
+    public GameObject Player;
     public GameObject GigasaurChar;
     public GameObject SpacePenguinChar;
     public GameObject CthuluChar;
@@ -232,42 +228,55 @@ public class MainMenuController : MonoBehaviour
 
     public void GigasaurFunc()
     {
-        playerList.Add(Gigasaur);
+
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("Gigazaur");
+        playerList.Add(player);
         gb.interactable = false;
         GigasaurChar.SetActive(true);
     }
 
     public void SpacePenguinFunc()
     {
-        playerList.Add(SpacePenguin);
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("Space Penguin");
+        playerList.Add(player);
         spb.interactable = false;
         SpacePenguinChar.SetActive(true);
     }
 
     public void CthuluFunc()
     {
-        playerList.Add(Cthulu);
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("Cthulhu");
+        playerList.Add(player);
         cb.interactable = false;
         CthuluChar.SetActive(true);
     }
 
     public void MekaDragonFunc()
     {
-        playerList.Add(MekaDragon);
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("Meka Dragon");
+        playerList.Add(player);
         mdb.interactable = false;
         MekaDragonChar.SetActive(true);
     }
 
     public void TheKingFunc()
     {
-        playerList.Add(TheKing);
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("The King");
+        playerList.Add(player);
         tkb.interactable = false;
         TheKingChar.SetActive(true);
     }
 
     public void CyberKittyFunc()
     {
-        playerList.Add(CyberKitty);
+        GameObject player = Instantiate(Player);
+        player.GetComponent<PlayerDesc>().setName("Cyber Kitty");
+        playerList.Add(player);
         ckb.interactable = false;
         CyberKittyChar.SetActive(true);
     }
@@ -276,6 +285,7 @@ public class MainMenuController : MonoBehaviour
     {
         SelScreen.SetActive(false);
         GameBoard.SetActive(true);
+        PlayerManager.SetActive(true);
     }
 
 }
