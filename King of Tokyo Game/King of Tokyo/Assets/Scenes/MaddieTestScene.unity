@@ -144,12 +144,20 @@ MonoBehaviour:
   BlurFade: {fileID: 0}
   CircleFade: {fileID: 0}
   optionsmenu: {fileID: 0}
+  SelScreen: {fileID: 0}
+  GameBoard: {fileID: 0}
   Gigasaur: {fileID: 0}
   SpacePenguin: {fileID: 0}
   Cthulu: {fileID: 0}
   MekaDragon: {fileID: 0}
   TheKing: {fileID: 0}
   CyberKitty: {fileID: 0}
+  GigasaurChar: {fileID: 0}
+  SpacePenguinChar: {fileID: 0}
+  CthuluChar: {fileID: 0}
+  MekaDragonChar: {fileID: 0}
+  TheKingChar: {fileID: 0}
+  CyberKittyChar: {fileID: 0}
   gb: {fileID: 0}
   spb: {fileID: 0}
   cb: {fileID: 0}
@@ -484,7 +492,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a251f278750f9544ba7df1cd743e0658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dice: {fileID: 1887110770}
+  dicezero: {fileID: 0}
+  diceone: {fileID: 0}
+  dicetwo: {fileID: 0}
+  dicethree: {fileID: 0}
+  dicefour: {fileID: 0}
+  dicefive: {fileID: 0}
+  rollButton: {fileID: 0}
+  rollNum: 0
 --- !u!4 &1352271730
 Transform:
   m_ObjectHideFlags: 0
@@ -558,6 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bd20cd29befbf418df57d3aefebe62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuControl: {fileID: 0}
+  players: []
 --- !u!4 &1738098224
 Transform:
   m_ObjectHideFlags: 0
@@ -572,9 +589,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1887110770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6973645773086531990, guid: 086a7ad99e3ab27418d8c8bd28244000,
-    type: 3}
-  m_PrefabInstance: {fileID: 909868927}
-  m_PrefabAsset: {fileID: 0}

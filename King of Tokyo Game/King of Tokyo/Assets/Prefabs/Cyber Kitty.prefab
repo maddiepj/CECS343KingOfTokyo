@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 579027096452722051}
   - component: {fileID: 3327692802988117311}
   - component: {fileID: 8323343555533574363}
+  - component: {fileID: 8022316356903065553}
+  - component: {fileID: 1918062908659500272}
   m_Layer: 0
   m_Name: Cyber Kitty
   m_TagString: Untagged
@@ -67,5 +69,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84691a269c698f54e8973fd72d17e069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8022316356903065553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372829860713037598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6c48dede6349943876502ee3566a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1918062908659500272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372829860713037598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db4bdb217b87b46b094bebf861b9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

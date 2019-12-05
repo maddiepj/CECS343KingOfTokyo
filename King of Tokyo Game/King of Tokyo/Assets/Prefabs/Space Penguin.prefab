@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6420877885109847345}
   - component: {fileID: 6314219313522499259}
   - component: {fileID: 8477694274860685902}
+  - component: {fileID: 7522571023399032365}
+  - component: {fileID: 8579611251325190740}
   m_Layer: 0
   m_Name: Space Penguin
   m_TagString: Untagged
@@ -67,5 +69,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84691a269c698f54e8973fd72d17e069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7522571023399032365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419120491499885580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6c48dede6349943876502ee3566a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8579611251325190740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419120491499885580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db4bdb217b87b46b094bebf861b9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4944566440893656527}
   - component: {fileID: 732340236661023808}
   - component: {fileID: 2147953549049946364}
+  - component: {fileID: 5105065911270796558}
+  - component: {fileID: 8560182367123656897}
   m_Layer: 0
   m_Name: The King
   m_TagString: Untagged
@@ -67,5 +69,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84691a269c698f54e8973fd72d17e069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5105065911270796558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438338950671284917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6c48dede6349943876502ee3566a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8560182367123656897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438338950671284917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3db4bdb217b87b46b094bebf861b9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
